@@ -7,15 +7,19 @@ import java.util.Calendar;
 
 @Getter
 @Setter
+@Entity
 public class User {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
-    private Calendar dateOfBirth; // Calendar é mais atualizado, tipo Date tá depreciado
-    private String CPF;
+    private Calendar dateOfBirth;
+    private String cpf;
     private String email;
     private String phone;
     private String password;
     private Double balance;
+
 
 }
